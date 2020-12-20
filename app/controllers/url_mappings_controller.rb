@@ -14,6 +14,7 @@ class UrlMappingsController < ApplicationController
 
   def show
     if @url_mapping
+      CreateUrlMappingClick.run({url_mapping_id: @url_mapping.id})
       redirect_to @url_mapping.original_url
     else
       redirect_to root_path, alert: "Sorry. Path not found"

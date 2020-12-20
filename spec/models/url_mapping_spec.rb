@@ -2,12 +2,13 @@
 #
 # Table name: url_mappings
 #
-#  id           :bigint           not null, primary key
-#  user_id      :bigint
-#  original_url :string           not null
-#  hashed_path  :string           not null
-#  created_at   :datetime         not null
-#  updated_at   :datetime         not null
+#  id                       :bigint           not null, primary key
+#  user_id                  :bigint
+#  original_url             :string           not null
+#  hashed_path              :string           not null
+#  created_at               :datetime         not null
+#  updated_at               :datetime         not null
+#  url_mapping_clicks_count :integer          default(0), not null
 #
 
 require 'rails_helper'
@@ -30,7 +31,7 @@ RSpec.describe UrlMapping, type: :model do
   end
 
   describe "#create" do
-    it 'should can get relcated user' do
+    it 'should can get related user' do
       user = FactoryBot.create(:user)
       url_mapping = FactoryBot.create(
         :url_mapping,

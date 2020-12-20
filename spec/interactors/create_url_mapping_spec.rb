@@ -17,7 +17,7 @@ RSpec.describe CreateUrlMapping, type: :interactor do
         expect(outcome.valid?).to be_falsey
     end
 
-    it "should failed if user_id is missing" do
+    it "should failed if original_url is missing" do
         outcome = CreateUrlMapping.run({user_id: user.id, original_url: nil})
         expect(outcome.valid?).to be_falsey
     end

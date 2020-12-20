@@ -5,6 +5,7 @@
         <th scope="col">#</th>
         <th scope="col">Original Url</th>
         <th scope="col">Shorten URL</th>
+        <th scope="col">Click Count</th>
         <th scope="col">Crated At</th>
       </tr>
     </thead>
@@ -14,6 +15,7 @@
           <th scope="row"></th>
           <td><%= url_mapping.original_url %></td>
           <td><%= url_mapping.shorten_url %></td>
+          <td><%= url_mapping.url_mapping_clicks_count %></td>
           <td><%= url_mapping.created_at.strftime("%d %b %Y %H:%M:%S") %></td>
         </tr>
       <% end %>

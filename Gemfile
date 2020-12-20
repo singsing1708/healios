@@ -22,6 +22,8 @@ gem 'dotenv-rails', github: 'bkeepers/dotenv'
 # The Ultimate Pagination Ruby Gem (https://github.com/ddnexus/pagy)
 gem 'pagy'
 
+gem 'counter_culture', '~> 2.0'
+
 # Manage application specific business logic.
 gem 'active_interaction', '~> 3.8'
 
