@@ -4,6 +4,11 @@
 
 This project is a code test from Healios for a rails application to generate shorten url
 
+
+## Demo site in Heroku
+
+https://healios-steven.herokuapp.com/
+
 ### Functional Requirement
 
 - Users can register
