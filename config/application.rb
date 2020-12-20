@@ -15,5 +15,14 @@ module Healios
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
+
+    config.action_mailer.smtp_settings = {
+      address: ENV.fetch("MAIL_ADDRESS"),
+      port: ENV.fetch("MAIL_PORT"),
+      user_name: ENV.fetch("MAIL_USERNAME"),
+      password: ENV.fetch("MAIL_PASSWORD"),
+      authentication: :plain,
+      enable_starttls_auto: true
+    }
   end
 end
