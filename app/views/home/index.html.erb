@@ -1,9 +1,11 @@
 <% if !current_user %>
   <main class="container">
     <div class="bg-light p-5 rounded">
-      <h1>Navbar example</h1>
-      <p class="lead">This example is a quick exercise to illustrate how the top-aligned navbar works. As you scroll, this navbar remains in its original position and moves with the rest of the page.</p>
-      <a class="btn btn-lg btn-primary" href="/docs/5.0/components/navbar/" role="button">View navbar docs »</a>
+      <h1>Short links, big results</h1>
+      <p class="lead">You can play with below testing account</p>
+      <p class="lead">email: example@example.com</p>
+      <p class="lead">password: password!</p>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-lg btn-primary" %>
     </div>
   </main>
 

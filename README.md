@@ -1,24 +1,58 @@
-# README
+# Healios
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 1. Project background
 
-Things you may want to cover:
+This project is a code test from Healios for a rails application to generate shorten url
 
-* Ruby version
+### Functional Requirement
 
-* System dependencies
+- Users can register
+- The user must be able to create a short version of a URL
+- The user must be able to navigate to the long version of the url by using the shortened version
+- URLs must belong to a registered user
+- Please count and display to the user how many times the URL has been used
+- Please include a read.me that details how to
+  - Install and run the app
+  - Any additional information you want to convey about the app
+- Please show your working in your commit history
 
-* Configuration
 
-* Database creation
+## 2. Setup Dev Machine
 
-* Database initialization
+### install postgresql
 
-* How to run the test suite
+```bash
+brew install postgresql
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+### ruby 2.7.2
 
-* Deployment instructions
+```bash
+brew install postgresql
+```
 
-* ...
+### configure env
+
+```bash
+rvm install 2.7.2
+rvm use 2.7.2
+```
+
+## 3. Running the application
+
+### install dependencies
+
+```
+$ gem install bundler
+$ bundle install
+$ cp ./env_sample/.env.dev .env
+$ rake db:create
+$ rake db:migrate
+$ rake db:seed
+```
+
+### running test cases
+
+```
+$ rspec
+```

@@ -13,7 +13,7 @@
 
 class UrlMapping < ApplicationRecord
   belongs_to :user
-  has_many :url_mapping_clicks
+  has_many :url_mapping_clicks, dependent: :destroy
 
   def shorten_url
     "#{ENV.fetch("HOST_NAME")}/#{self.hashed_path}"

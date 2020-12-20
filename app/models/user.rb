@@ -22,6 +22,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
 
-  has_many :url_mappings
-         
+  has_many :url_mappings, dependent: :destroy
+
 end
