@@ -22,6 +22,9 @@ gem 'dotenv-rails', github: 'bkeepers/dotenv'
 # The Ultimate Pagination Ruby Gem (https://github.com/ddnexus/pagy)
 gem 'pagy'
 
+# Manage application specific business logic.
+gem 'active_interaction', '~> 3.8'
+
 # Flexible authentication solution for Rails with Warden (https://github.com/heartcombo/devise)
 gem 'devise'
 

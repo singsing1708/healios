@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Original Url</th>
+        <th scope="col">Shorten URL</th>
+        <th scope="col">Crated At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% current_user.url_mappings.order(created_at: :desc).each do |url_mapping| %>
+        <tr>
+          <th scope="row"></th>
+          <td><%= url_mapping.original_url %></td>
+          <td><%= url_mapping.shorten_url %></td>
+          <td><%= url_mapping.created_at.strftime("%d %b %Y %H:%M:%S") %></td>
+        </tr>
+      <% end %>
+        </tbody>
+  </table>
+</div>
