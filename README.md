@@ -28,14 +28,14 @@ brew install postgresql
 ### ruby 2.7.2
 
 ```bash
-brew install postgresql
+rvm install 2.7.2
+rvm use 2.7.2
 ```
 
 ### configure env
 
 ```bash
-rvm install 2.7.2
-rvm use 2.7.2
+cp sample/env_samples/.env_dev .env
 ```
 
 ## 3. Running the application
@@ -43,12 +43,12 @@ rvm use 2.7.2
 ### install dependencies
 
 ```
-$ gem install bundler
+
 $ bundle install
-$ cp ./env_sample/.env.dev .env
 $ rake db:create
 $ rake db:migrate
 $ rake db:seed
+$ rails s
 ```
 
 ### running test cases
